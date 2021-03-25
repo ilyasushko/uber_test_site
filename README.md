@@ -2,3 +2,5 @@
 
 # uber_test_site
 html css boostrap sass
+
+ready exept footer
