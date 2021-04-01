@@ -1,4 +1,12 @@
-* 
+$main-color: #1EACC7
+$second-color: #ff5656
+
+=btn_hover
+    &:hover
+        background-image: none
+        background-color: $main-color
+    
+    * 
     font-family: 'Roboto', sans-serif
 
 /* Обратите внимание на измения для "липкой" шапки, пометил их звездочкой ниже */
@@ -86,6 +94,8 @@ nav
     font-size: 14px
     font-weight: 400
     text-transform: uppercase
+    +btn_hover
+    
 
 
 .promo 
@@ -234,13 +244,66 @@ nav
 
 
 .mobile_plus 
-    margin-top: 225px
+    display: flex 
+    justify-content: center
+    align-items: center
+    position: absolute
+    bottom: 35px
+    left: 50%
+    transform: translateX(-50%)
+    width: 26px
+    height: 26px
+    background-color: #000000
+    border-radius: 100%
+    cursor: pointer
+    &:before
+        content: ''
+        display: block
+        width: 14px 
+        height: 2px 
+        background-color: $main-color
+        transition: 0.3s all
+    &:after 
+        content: ''
+        position: absolute 
+        left: 50%
+        transform: translateX(-50%)
+        display: block 
+        height: 14px
+        width: 2px
+        background-color: $main-color
+        transition: 0.3s all
+    &:hover 
+        &:before, &:after 
+            background-color: $second-color
+    &:active
+        &:before, &:after
+            background-color: yellow
+            transition: 0s all
+            
+/**     margin-top: 225px
     position: absolute
     width: 27px
     height: 27px
     background: black
-    border-radius: 50%
+    border-radius: 100%
     text-align: center
+    &:before
+        content: ''
+        position: absolute
+        display: block
+        width: 14px
+        height: 2px
+        background-color: $main-color
+    &:after
+        content: ''
+        position: absolute
+        transform: translateY(50%)
+        left: 50%
+        display: block
+        height: 14px
+        width: 2px
+        background-color: $main-color  **/      
 
 
 
